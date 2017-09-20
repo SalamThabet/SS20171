@@ -1,0 +1,45 @@
+///////////// Example 1 /////////////////
+#include <stdio.h>
+#include <string.h>
+void empSalary(char *name, int increment)
+{
+    int salary=1200;
+    char empName[10];
+    salary = salary + increment;
+    strcpy(empName,name);
+    printf("Employee name: %s has salary of: %d", empName, salary);
+}
+main()
+{
+   char name[20];
+   printf("Enter name: ");
+   scanf("%s",name);
+   empSalary(name,100);
+}
+
+///////////// Example 2 /////////////////
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+    char buff[10];
+    int pass = 0;
+    printf("\n Enter the password : \n");
+    gets(buff);
+    if(strcmp(buff, "abc123"))
+    {
+        printf ("\n Wrong Password \n");
+    }
+    else
+    {
+        printf ("\n Correct Password \n");
+        pass = 1;
+    }
+    if(pass)
+    {
+        printf ("\n You got Root privileges \n");
+    }
+
+    return 0;
+
+}
